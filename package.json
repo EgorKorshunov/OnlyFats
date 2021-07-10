@@ -8,7 +8,7 @@
     "start:frontend": "npm start --prefix client",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "clean": "rm -rf ./backend/node_modules && rm -rf ./client/node_modules && rm -rf ./node_modules && rm ./backend/package-lock.json && rm ./client/package-lock.json && rm package-lock.json",
-    "inst": "cd backend && npm i && cd .. && cd client && npm i && cd .. && npm i",
+    "inst": "cd backend && npm i && cd .. && cd client && npm i && cd .. && npm i && npm audit fix",
     "lint": "cd client && npm run lint"
   },
   "repository": {
