@@ -1,0 +1,27 @@
+{
+  "name": "onlyfats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "node index.js",
+    "start:frontend": "npm start --prefix client",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "clean": "rm -rf ./backend/node_modules && rm -rf ./client/node_modules && rm -rf ./node_modules && rm ./backend/package-lock.json && rm ./client/package-lock.json && rm package-lock.json",
+    "inst": "cd backend && npm i && cd .. && cd client && npm i && cd .. && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgorKorshunov/OnlyFats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EgorKorshunov/OnlyFats/issues"
+  },
+  "homepage": "https://github.com/EgorKorshunov/OnlyFats#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1"
+  }
+}
